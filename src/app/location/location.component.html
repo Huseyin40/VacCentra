@@ -1,0 +1,124 @@
+<div id="top">
+    <input type="text" [(ngModel)]="locationName" class="form-control" (keyup.enter)="searchLocations()" placeholder="Type uw gemeente...">
+    <button (click)="searchLocations()" class="btn btn-primary">Zoek uw Vaccinatiecentra</button>
+
+</div>
+
+
+<!--desktop info tabel-->
+<div id="desktop">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">Plaats
+            </div>
+            <div class="col-md-2">Naam
+            </div>
+            <div class="col-md-2">Tel.
+            </div>
+            <div class="col-md-2">Adres
+            </div>
+            <div class="col-md-2">Mail
+            </div>
+            <div class="col-md-2">Info
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" *ngFor="let location of location$ | async">
+            <div class="col-md-2">{{location.place}}</div> <br>
+            <div class="col-md-2"><i class="fas fa-home"></i>{{location.name}}</div> <br>
+            <div class="col-md-2"> <i class="fas fa-phone"></i> <a href="tel:{{location.tel}}">{{location.tel}}</a>
+            </div> <br>
+            <div class="col-md-2"> <i class="fas fa-map-marked-alt"></i> <a
+                    href="http://maps.google.com/?q={{location.adress +', ' + location.place}}"
+                    target="_blank">{{location.adress}}</a></div> <br>
+            <div class="col-md-2" id="mail"><i class="fas fa-envelope"></i> <a
+                    href="mailto:{{location.mail}}">{{location.mail}}</a> <br>
+            </div>
+            <div class="col-md-2"><i class="fas fa-info-circle"></i>{{location.info}}</div> <br>
+        </div>
+    </div>
+</div>
+
+
+<!--mobile info tabel-->
+<div class="container-fluid" id="mobile-info">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="list-group" class="row" *ngFor="let location of location$ | async">
+                <div class="list-group-item" id="mobile">
+                    {{ location.place}} <br>
+                    <i class="fas fa-home"></i>
+                    {{ location.name}} <br>
+                    <i class="fas fa-phone"></i> <a href="tel:{{location.tel}}"> {{ location.tel}}</a> <br>
+                    <i class="fas fa-map-marked-alt"></i> <a
+                        href="http://maps.google.com/?q={{location.adress +', ' + location.place}}" target="_blank"> {{
+                        location.adress}}</a> <br>
+                    <i class="fas fa-envelope"></i> <a href="mailto:{{location.mail}}"> {{ location.mail}}</a> <br>
+                    <i class="fas fa-info-circle"></i> {{ location.info}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--fotos met hyperlink naar laatjevaccineren.be 
+    verdwijnt op mobile screen-->
+<div class="container-fluid" id="pictures">
+    <div class="row">
+        <div class="col-md-6">
+            <a href="https://www.laatjevaccineren.be/volgorde-van-vaccineren" target="_blank">
+                <img src="../assets/vaccinatieschema.jpg"  class="img-fluid mt-3 syntra mb-3">
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a href="https://www.laatjevaccineren.be/vaccinatiecentra-in-vlaanderen-wanneer-en-waar-krijg-ik-mijn-vaccin"
+                target="_blank"> <img _ngcontent-atk-c1="" src="../assets/Vaccinatieparcours.jpg" 
+                     class="img-fluid mt-3 syntra mb-3">
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- verschijnt op mobile screen 
+    hyperlink naar veel gestelde (laatjevaccineren.be)-->
+<div class="col-md-12">
+    <a _ngcontent-atk-c1="" href="https://www.laatjevaccineren.be/veelgestelde-vragen" target="_blank"><img
+            _ngcontent-atk-c1="" src="../assets/vlaanderen.jpg" width="350px" class="img-fluid mt-3 syntra mb-3"
+            id="syntra-logo"></a>
+</div>
+
+
+<!--meer info-->
+<div class="container-fluid">
+    <div class="row">
+        <!--link naar onze linkedIn accounts-->
+        <div class="col-md-4" id="linkedin">
+            <h1><i class="fab fa-linkedin"></i>Meet the Fullstack'ers</h1>
+            <a class="profile" href="https://www.linkedin.com/in/huseyinkurt40/" target="_blank">Huseyin Kurt /</a>
+            <a class="profile" href="https://www.linkedin.com/in/melihcanbilgin/" target="_blank"> Melihcan Bilgin/</a>
+            <a class="profile" href="https://www.linkedin.com/in/mustafa-kilic-4a1080204/" target="_blank"> Mustafa
+                Kilic</a> <br>
+            <a class="profile" href="https://www.linkedin.com/in/hello-code-470a19199/" target="_blank"> Massimo De
+                Nittis(Docent)</a>
+        </div>
+        <!--link naar pagina van opleinding (syntra limburg)-->
+        <div class="col-md-4">
+            <a href="https://www.syntra-limburg.be/opleidingen/voltijdse-dagopleiding-full-stack-developer"
+                target="_blank">
+                <img src="../assets/syntra_logo_wit.png" width="200px" class="img-fluid mt-3 syntra mb-3"
+                    id="syntra-logo"></a>
+        </div>
+        <!--info over onze site-->
+        <div class="col-md-4" id="about">
+            <h1>Over ons</h1>
+            VacCentras.be is het vervolg van TerugSamen.be. Ontwikkeld door de studenten Full Stack Development te Syntra
+            Genk. Met deze tool vindt je snel en gemakkelijk informatie over je vaccinatiecentra. 
+        </div>
+    </div>
+</div>
+<br><br><br><br>

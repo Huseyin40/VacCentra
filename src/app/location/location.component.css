@@ -1,0 +1,124 @@
+#top {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+button {
+    width: 300px;
+    margin-top: 5px;
+    margin-bottom: 7px;
+    color: aquamarine;
+    position: relative;
+}
+
+@media screen and (min-width: 750px) {
+    #mobile-info, #mobile, .col-md-12 {
+      display: none;
+    }
+    #syntra-logo {
+        padding-top: 30px;
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    #desktop, #pictures {
+      display: none;
+    }
+  }
+
+
+.col-md-2 {
+    padding:4px;
+    text-decoration: none;
+    border: solid 1px #043850; border-spacing: 4px;
+    background-color:#95e5d7; 
+    text-align: center; 
+    border-radius:.25rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    box-sizing: border-box;
+    position: relative;
+    flex-flow: row wrap;
+}
+    
+#mobile {
+    padding:4px;
+    text-decoration: none;
+    border: solid 1px #043850; border-spacing: 4px;
+    background-color:#95e5d7; 
+    border-radius:.25rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    box-sizing: border-box;
+    flex-flow: row wrap;
+    text-align: center; 
+
+    }
+
+
+
+i {
+    margin: 2px;
+  }
+.fa-phone{
+    
+   padding:1px;
+   margin:1px;
+}
+    
+
+#name{
+    margin-left: 100px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    color: white;
+
+}
+.img-fluid{
+ align-items: center;
+  margin-left:auto;
+  margin-right: auto;
+  position: relative;
+  
+}
+.profile {
+    box-sizing: border-box;
+    padding:1px;
+    font-size: 15px;
+    margin-bottom: 15px;
+    color:white;
+    position: relative;
+}
+h1 {
+    font-size: 30px;
+   
+}
+ 
+#linkedin{
+    padding-top: 40px;
+    color:white;  
+    text-align: center;
+    position: relative;
+}
+.profile:hover{
+    color:black;}
+
+#about {
+    color: white;
+    text-align: center;
+    padding-right: 30px;
+    position: relative;
+}
+
+#syntra-logo {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+}
+#mail{
+    font-size: 12px;
+}
